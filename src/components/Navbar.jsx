@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom';
+import './navbar.css'
 
 function Navbar() {
     useEffect(() => {
@@ -10,14 +12,13 @@ function Navbar() {
             });
         }
     }, []);
-
     return (
         <div>
             <>
                 {/* Navbar */}
                 <nav className="navbar navbar-expand-lg bg-body-tertiary">
                     {/* Container wrapper */}
-                    <div className="container-fluid">
+                    <div className="container">
                         {/* Toggle button */}
                         <button
                             data-mdb-collapse-init=""
@@ -33,31 +34,46 @@ function Navbar() {
                         {/* Collapsible wrapper */}
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             {/* Navbar brand */}
-                            <a className="navbar-brand mt-2 mt-lg-0" href="#">
-                                <img
-                                    src="/public/img/Frame 22.png"
-                                    height={15}
-                                    alt="MDB Logo"
-                                    loading="lazy"
-                                />
-                            </a>
+                            <Link className="navbar-brand mt-2 mt-lg-0" to="/home">
+                                <img src="/img/Frame 22.png" alt="logo" className="img-fluid w-100" />
+                            </Link>
                             {/* Left links */}
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">
+                                    <Link className="nav-link" to="/categories">
                                         Categories
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                             {/* Left links */}
                         </div>
-                        {/* Collapsible wrapper */}
+                        <div className="col-md-5 col-12 mr-5 d-inline-flex justify-content-center align-items-center">
+                            {/* Email input */}
+                            <div data-mdb-input-init className="m-auto d-flex w-100 justify-content-center rounded">
+                                <i className="fas fa-search position-absolute top-50 end-0 translate-middle-y me-4" />
+                                <input type="email" id="form5Example24" className="form-control"  placeholder="Search courses..." />
+                            </div>
+                        </div>
                         {/* Right elements */}
                         <div className="d-flex align-items-center">
+                            <ul className="navbar-nav  mr-4 ">
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/teach">
+                                        Teach on Byway
+                                    </Link>
+                                </li>
+                            </ul>
                             {/* Icon */}
-                            <a className="text-reset me-3" href="#">
+                            <a className="text-reset me-3" href="##">
                                 <i className="fas fa-shopping-cart" />
                             </a>
+                            
+                            <div className="dropdown">
+                                <Link to="/login" className=" btn-1">Login</Link>
+                            </div>
+                            <div className="dropdown">
+                                <Link to="/signup" className="btn-2">Sign Up</Link>
+                            </div>
                         </div>
                         {/* Right elements */}
                     </div>
@@ -65,7 +81,6 @@ function Navbar() {
                 </nav>
                 {/* Navbar */}
             </>
-
         </div>
     )
 }
