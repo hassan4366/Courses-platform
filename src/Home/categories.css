@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.img-1{
+.img-1 {
     width: 20px;
     height: 20px;
     object-fit: cover;

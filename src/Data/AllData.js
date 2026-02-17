@@ -7,7 +7,7 @@ const apiValue = createContext()
 function AllData({children}) {
     const [text, setText] = useState([])
     useEffect(() => {
-        axios.get('https://jsonplaceholder.typicode.com/posts')
+        axios.get('/js/data.json')
         .then(response => setText(response.data))
     },[])
   return (
@@ -17,4 +17,4 @@ function AllData({children}) {
   )
 }
 
-export default AllData
+export { apiValue, AllData }
