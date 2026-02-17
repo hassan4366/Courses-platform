@@ -7,8 +7,8 @@ function Categories() {
             <div className='row'>
                 <h2 className="text-dark font-weight-bold mb-5">Top Categories</h2>
                 <div className='col-md-3'>
-                    <div className="card p-3">
-                        <img src="/img/Group 136.png"  className="card-img-top img-1 w-25 m-auto" alt = "img" />
+                    <div className="card">
+                        <img src="/img/Group 136.png" alt="Card image" className="card-img-top img-1" />
                         <div className="card-body text-center">
                             <h4 className="card-title font-weight-bold mb-3">Astrology</h4>
                             <p>11 Courses</p>
@@ -16,8 +16,8 @@ function Categories() {
                     </div>
                 </div>
                 <div className='col-md-3'>
-                    <div className="card p-3">
-                        <img src="/img/Group 136 (1).png"  className="card-img-top img-1 w-25 m-auto" alt="Card" />
+                    <div className="card">
+                        <img src="/img/Group 136 (1).png" alt="Card image" className="card-img-top img-1" />
                         <div className="card-body text-center">
                             <h4 className="card-title font-weight-bold mb-3">Development</h4>
                             <p>12 Courses</p>
@@ -25,8 +25,8 @@ function Categories() {
                     </div>
                 </div>
                 <div className='col-md-3'>
-                    <div className="card p-3">
-                        <img src="/img/Group 136 (2).png"  className="card-img-top img-1 w-25 m-auto" alt="Marketing" />
+                    <div className="card">
+                        <img src="/img/Group 136 (2).png" alt="Card image" className="card-img-top img-1" />
                         <div className="card-body text-center">
                             <h4 className="card-title font-weight-bold mb-3">Marketing</h4>
                             <p>12 Courses</p>
@@ -34,8 +34,8 @@ function Categories() {
                     </div>
                 </div>
                 <div className='col-md-3'>
-                    <div className="card p-3">
-                        <img src="/img/Group 136 (3).png"  className="card-img-top img-1 w-25 m-auto" alt="Physics" />
+                    <div className="card">
+                        <img src="/img/Group 136 (3).png" alt="Card image" className="card-img-top img-1" />
                         <div className="card-body text-center">
                             <h4 className="card-title font-weight-bold mb-3">Physics</h4>
                             <p>14 Courses</p>

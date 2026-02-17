@@ -4,8 +4,6 @@ import Footer from './components/footer'
 import Header from './Home/Header'
 import Numbers from './Home/Numbers'
 import Categories from './Home/Categories'
-import Checkout from './Home/Checkout'
-import Instractor from './Home/Instractor'
 
 
 
@@ -16,8 +14,6 @@ function App() {
       <Header />
       <Numbers />
       <Categories />
-      <Instractor />
-      <Checkout />
       <Footer />
     </div>
   )
