@@ -16,7 +16,7 @@ function Navbar() {
         <div>
             <>
                 {/* Navbar */}
-                <nav className="navbar navbar-expand-lg bg-body-tertiary">
+                <nav className="navbar navbar-expand-lg bg-body-tertiary p-3">
                     {/* Container wrapper */}
                     <div className="container">
                         {/* Toggle button */}
@@ -40,7 +40,7 @@ function Navbar() {
                             {/* Left links */}
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/categories">
+                                    <Link className="nav-link ml-3" to="/categories">
                                         Categories
                                     </Link>
                                 </li>
@@ -51,14 +51,14 @@ function Navbar() {
                             {/* Email input */}
                             <div data-mdb-input-init className="m-auto d-flex w-100 justify-content-center rounded">
                                 <i className="fas fa-search position-absolute top-50 end-0 translate-middle-y me-4" />
-                                <input type="email" id="form5Example24" className="form-control"  placeholder="Search courses..." />
+                                <input type="email" id="form5Example24" className="form-control m-auto"  placeholder="Search courses..." />
                             </div>
                         </div>
                         {/* Right elements */}
                         <div className="d-flex align-items-center">
                             <ul className="navbar-nav  mr-4 ">
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/teach">
+                                    <Link className="nav-link mr-3" to="/teach">
                                         Teach on Byway
                                     </Link>
                                 </li>
@@ -69,10 +69,10 @@ function Navbar() {
                             </a>
                             
                             <div className="dropdown">
-                                <Link to="/login" className=" btn-1">Login</Link>
+                                <Link to="/login" className="b-1">Login</Link>
                             </div>
                             <div className="dropdown">
-                                <Link to="/signup" className="btn-2">Sign Up</Link>
+                                <Link to="/signup" className="b-2">Sign Up</Link>
                             </div>
                         </div>
                         {/* Right elements */}
