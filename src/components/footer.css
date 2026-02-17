@@ -1,0 +1,18 @@
+footer{
+    font-family: inter, sans-serif;
+}
+.footer-home {
+  background-color: #1E293B;
+}
+footer p{
+    color: #CBD5E1;
+    font-size: 14px;
+}
+footer p a{
+  color: #CBD5E1;
+  text-decoration: none;
+}
+
+.footer-home a:hover {
+  color: rgb(163, 158, 158);
+}

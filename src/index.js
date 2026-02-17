@@ -1,8 +1,8 @@
 import {createBrowserRouter,RouterProvider,} from "react-router";
 import App from "./App";
-import AllData from "./Data/AllData";
+// import AllData from "./Data/AllData";
 import { createRoot } from "react-dom/client";
-import ScrollToTop from "react-scroll-to-top";
+// import ScrollToTop from "react-scroll-to-top";
 
 let router = createBrowserRouter([
   {
@@ -12,9 +12,8 @@ let router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById("root")).render(
-  <AllData>
-    <ScrollToTop smooth >
+  
+  
     <RouterProvider router={router} />
-    </ScrollToTop>
-  </AllData>
+
 );
