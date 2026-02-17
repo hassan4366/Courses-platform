@@ -34,7 +34,7 @@ function Navbar() {
                         {/* Collapsible wrapper */}
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             {/* Navbar brand */}
-                            <Link className="navbar-brand mt-2 mt-lg-0" to="/home">
+                            <Link className="navbar-brand mt-2 mt-lg-0" to="/">
                                 <img src="/img/Frame 22.png" alt="logo" className="img-fluid w-100" />
                             </Link>
                             {/* Left links */}
