@@ -5,7 +5,7 @@ function Categories() {
     <div className="categories my-5">
         <div className='container'>
             <div className='row'>
-                <h2 className="text-dark font-weight-bold mb-4">Top Categories</h2>
+                <h2 className="text-dark font-weight-bold mb-5">Top Categories</h2>
                 <div className='col-md-3'>
                     <div className="card">
                         <img src="/img/Group 136.png" alt="Card image" className="card-img-top img-1" />
