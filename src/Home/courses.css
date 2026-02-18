@@ -1,0 +1,13 @@
+.icons{
+    color: #FFD700;
+}
+.details{
+    font-size: 12px;
+    margin-top: 8PX;
+}
+.courses img{
+    border-radius: 24px;
+}
+.courses .icons span {
+    font-size: 13px;
+}
