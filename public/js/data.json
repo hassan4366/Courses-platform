@@ -139,7 +139,26 @@
       "students": 5000,
       "courses": 15,
       "image": "https://media.istockphoto.com/id/1364917563/photo/businessman-smiling-with-arms-crossed-on-white-background.jpg?s=2048x2048&w=is&k=20&c=uEaEqFvI74GpTWzcRCiDMR3qWqS2qVzKQREVBgmcxao="
+    },
+    {
+      "id": 4,
+      "name": "Cameron Williamson",
+      "jobTitle": "Backend Developer",
+      "rating": 4.9,
+      "students": 1500,
+      "courses": 15,
+      "image": "https://media.istockphoto.com/id/1364917563/photo/businessman-smiling-with-arms-crossed-on-white-background.jpg?s=2048x2048&w=is&k=20&c=uEaEqFvI74GpTWzcRCiDMR3qWqS2qVzKQREVBgmcxao="
+    },
+    {
+      "id": 5,
+      "name": "Cameron Williamson",
+      "jobTitle": "tester Developer",
+      "rating": 4.3,
+      "students": 2000,
+      "courses": 15,
+      "image": "https://media.istockphoto.com/id/1364917563/photo/businessman-smiling-with-arms-crossed-on-white-background.jpg?s=2048x2048&w=is&k=20&c=uEaEqFvI74GpTWzcRCiDMR3qWqS2qVzKQREVBgmcxao="
     }
+    
   ],
 
   "testimonials": [

@@ -7,7 +7,8 @@ import Categories from './Home/Categories'
 import Courses from './Home/Courses'
 import Instractor from './Home/Instractor'
 import Checkout from './Home/Checkout'
-
+import Instructors from './Home/Instructors'
+import Comments from './Home/comments'
 
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
       <Numbers />
       <Categories />
       <Courses />
+      <Instructors />
+      <Comments />
       <Instractor />
       <Checkout />
       <Footer />
