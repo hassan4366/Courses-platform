@@ -22,18 +22,18 @@ function Courses() {
             Top Courses
           </h2>
 
-          {data.map((course) =>
+          {courses.map((course) =>
             course.id > 6 ? (
               <div className='col-md-3 mb-4' key={course.id}>
                 <div className='card h-100'>
                   <img
-                    src={item.image}
+                    src={course.image}
                     className='card-img-top p-3'
-                    alt={item.title}
+                    alt={course.title}
                   />
                   <div className='card-body'>
-                    <h6 className='card-title font-weight-bold'>{item.title}</h6>
-                    <p className='card-text text-secondary'>by {item.mentor}</p>
+                    <h6 className='card-title font-weight-bold'>{course.title}</h6>
+                    <p className='card-text text-secondary'>by {course.mentor}</p>
                     <div className='icons'>
                       <i className="fa-solid fa-star"></i>
                       <i className="fa-solid fa-star"></i>
@@ -43,7 +43,7 @@ function Courses() {
                       <span className='text-secondary ml-1'>(1200 Ratings)</span>
                     </div>
                     <p className='text-secondary details'>22 Total Hours. 155 Lectures. Beginner</p>
-                    <p className='card-text font-weight-bold'>$ {item.price}</p>
+                    <p className='card-text font-weight-bold'>$ {course.price}</p>
                   </div>
                 </div>
               </div>

@@ -1,6 +1,8 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
+import Footer from '../components/footer'
 import Signup from './Signup'
+
 
 
 function AllSignup() {
@@ -8,6 +10,7 @@ function AllSignup() {
         <div>
             <Navbar />
             <Signup/>
+            <Footer />
         </div>
     )
 }
