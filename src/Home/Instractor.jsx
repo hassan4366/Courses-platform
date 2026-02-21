@@ -19,7 +19,7 @@ function Instractor() {
                 <br />
                 We provide the tools and skills to teach what you love.
               </p>
-              <button className="btn-dark p-2 rounded">
+              <button className="btn-dark p-2 rounded border-0">
                 Start Your Instructor Journey
                 <i class="fa-solid fa-arrow-right"></i>
               </button>

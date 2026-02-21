@@ -7,6 +7,7 @@ import Categories from './Home/Categories'
 import Courses from './Home/Courses'
 import Instractor from './Home/Instractor'
 import Checkout from './Home/Checkout'
+import Trinee from './Home/Trinee'
 
 
 
@@ -18,6 +19,7 @@ function App() {
       <Numbers />
       <Categories />
       <Courses />
+      <Trinee />
       <Instractor />
       <Checkout />
       <Footer />

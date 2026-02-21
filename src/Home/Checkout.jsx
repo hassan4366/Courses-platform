@@ -14,7 +14,7 @@ function Checkout() {
               <br />
               their fields, and enriching their lives.
             </p>
-            <button className="btn-dark text-light p-3 mt-1 rounded">
+            <button className="btn-dark text-light border-0 p-2 mt-1 rounded">
               Checkout Courses <i class="fa-solid fa-arrow-right"></i>
             </button>
           </div>
