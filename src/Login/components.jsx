@@ -37,7 +37,7 @@ function Login() {
                 </div>
                 <button
                   type="submit"
-                  className="btn-dark btn-block p-3 mt-4  w-25 rounded"
+                  className="btn-dark btn-block border-0 p-3 mt-4  w-25 rounded"
                 >
                   Sign In
                   <i className="fa-solid fa-arrow-right ml-2" />
@@ -71,14 +71,22 @@ function Login() {
                       className=" btn-outline-secondary mx-2 px-5"
                       style={{ color: "#EA4335" }}
                     >
-                      <img src="/img/google.png" alt="google" />
+                      <img
+                        src="/img/google.png"
+                        alt="google"
+                        className="mr-2"
+                      />
                       Google
                     </button>
                     <button
                       type="button"
                       className=" btn-outline-secondary mx-2 px-5"
                     >
-                      <img src="/img/image 1.png" alt="microsoft" />
+                      <img
+                        src="/img/image 1.png"
+                        alt="microsoft"
+                        className="mr-2"
+                      />
                       Microsoft
                     </button>
                   </div>

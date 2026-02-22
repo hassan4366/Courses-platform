@@ -15,9 +15,9 @@ function Signup() {
           </div>
           <div className="col-md-6 d-flex align-items-center">
             <div className="w-75">
-              <h2 className="text-dark font-weight-bold text-center mt-5 ml-5">
+              <h1 className="text-dark font-weight-bold text-center mt-5 ml-5">
                 Create Your Account
-              </h2>
+              </h1>
               <form className="ml-5 w-100">
                 <label htmlFor="firstName" className="font-weight-bold mt-4">
                   Full Name
@@ -107,10 +107,10 @@ function Signup() {
                     <span className="mx-3 text-secondary">Sign in with</span>
                     <hr className="flex-grow-1" />
                   </div>
-                  <div className="d-flex justify-content-between">
+                  <div className="d-flex justify-content-between ml-2">
                     <button
                       type="button"
-                      className=" btn-outline-secondary  mx-2 px-4 py-3 rounded"
+                      className=" btn-outline-secondary  mx-2 px-5 py-3 rounded"
                       style={{ color: "#3b82f6" }}
                     >
                       <i
@@ -125,17 +125,25 @@ function Signup() {
                     </button>
                     <button
                       type="button"
-                      className=" btn-outline-secondary mx-2 px-5"
+                      className=" btn-outline-secondary mx-2 px-5 py-3"
                       style={{ color: "#EA4335" }}
                     >
-                      <img src="/img/google.png" alt="google" />
+                      <img
+                        src="/img/google.png"
+                        alt="google"
+                        className="mr-2"
+                      />
                       Google
                     </button>
                     <button
                       type="button"
-                      className=" btn-outline-secondary mx-2 px-5"
+                      className=" btn-outline-secondary mx-2 px-5 py-3 "
                     >
-                      <img src="/img/image 1.png" alt="microsoft" />
+                      <img
+                        src="/img/image 1.png"
+                        alt="microsoft"
+                        className="mr-2"
+                      />
                       Microsoft
                     </button>
                   </div>
