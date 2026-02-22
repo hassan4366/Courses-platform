@@ -6,3 +6,6 @@
 .card-1{
     width: 20%;
 }
+.card-body p{
+    font-size: 12px;
+}
