@@ -7,11 +7,11 @@ function Popular() {
     const mentors = data?.mentors ?? []
 
     if (error) {
-        return <h3>Failed to load data.</h3>
+        return <h3 className='text-center text-danger'>Failed to load data.</h3>
     }
 
     if (!data) {
-        return <h3>Loading...</h3>
+        return <h3 className='text-center text-primary'>Loading...</h3>
     }
 
     return (

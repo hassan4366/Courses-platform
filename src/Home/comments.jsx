@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { apiValue } from "../Data/AllData";
+import './Comments.css';
 
 function Comments() {
     const { data, error } = useContext(apiValue) || {};
@@ -13,13 +14,13 @@ function Comments() {
     if (!testimonials.length) return null;
 
     const total = testimonials.length;
-
+    // click prev
     const handlePrev = () => {
         if (total <= visibleCount) return;
         setActiveArrow("prev");
         setStartIndex((prev) => (prev - 1 + total) % total);
     };
-
+    // Click Next 
     const handleNext = () => {
         if (total <= visibleCount) return;
         setActiveArrow("next");
@@ -35,7 +36,7 @@ function Comments() {
             });
 
     return (
-        <div className="my-5">
+        <div className="my-5 p-4 Comments">
             <div className="container">
                 <div className="d-flex justify-content-between align-items-center mb-4">
                     <h2 className="text-dark font-weight-bold mb-0">

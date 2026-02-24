@@ -5,6 +5,7 @@ import { createRoot } from "react-dom/client";
 import AllSignup from "./Signup/AllSignup";
 import Register from "./Login/register";
 import AllCatogory from "./Category/AllCatogory";
+import Alldeatial from "./Deatials/Alldeatial";
 // import ScrollToTop from "react-scroll-to-top";
 
 let router = createBrowserRouter([
@@ -23,6 +24,10 @@ let router = createBrowserRouter([
   {
     path: "category",
     element: <AllCatogory />
+  },
+  {
+    path: "deatial",
+    element: <Alldeatial/>
   },
 ]);
 
