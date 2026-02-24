@@ -4,7 +4,7 @@ import './courses.css'
 
 function Courses() {
   const { data, error } = useContext(apiValue) || {}
-  const courses = data?.courses ?? []
+  const courses = data?.courses || []
 
   if (error) {
     return <h3>Failed to load data.</h3>

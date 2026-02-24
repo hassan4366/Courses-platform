@@ -1,11 +1,9 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.card-1{
-    width: 20%;
-}
-.card-body p{
+
+.card-body p {
     font-size: 12px;
 }

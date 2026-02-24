@@ -18,11 +18,11 @@ function Instructors() {
       <div className='container'>
         <div className='row'>
           <h2 className="text-dark font-weight-bold mb-5">
-          Top Instructors
+            Top Instructors
           </h2>
 
           {mentors.map((course) => (
-            <div className='col-md-2 col-6 m-auto h-100 card-1' key={course.id}>
+            <div className='col-lg-2 col-md-3 col-6 m-auto h-100' key={course.id}>
               <div className='card h-100'>
                 <img
                   src={course.image}
