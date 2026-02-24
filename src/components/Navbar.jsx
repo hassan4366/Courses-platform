@@ -64,9 +64,9 @@ function Navbar({ search, setSearch = () => { } }) {
                                 <Link className="nav-link" to="/teach">Teach on Byway</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="##">
+                                <Link className="nav-link" to="/cart">
                                     <i className="fas fa-shopping-cart" />
-                                </a>
+                                </Link>
                             </li>
                             <li className="nav-item me-2">
                                 <Link to="/login" className="btn btn-light px-3">Login</Link>

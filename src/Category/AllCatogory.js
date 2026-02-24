@@ -5,6 +5,7 @@ import Popular from "./Popular";
 import Featured from "./Featured";
 import Footer from "../components/footer";
 
+
 function AllCatogory() {
   const [search, setSearch] = useState("");
 
