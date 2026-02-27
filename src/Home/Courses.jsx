@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { apiValue } from '../Data/AllData'
 import './courses.css'
+import { Link } from 'react-router-dom'
 
 function Courses() {
   const { data, error } = useContext(apiValue) || {}
@@ -18,9 +19,12 @@ function Courses() {
     <div className="courses my-4">
       <div className='container'>
         <div className='row'>
-          <h2 className="text-dark font-weight-bold mb-5">
-            Top Courses
-          </h2>
+          <div className='col-md-12'>
+            <h2 className="text-dark font-weight-bold ">
+              Top Courses
+            </h2>
+            <Link to="/all-courses" className="float-right mb-4">See All</Link>
+          </div>
 
           {courses.map((course) =>
             course.id > 6 ? (

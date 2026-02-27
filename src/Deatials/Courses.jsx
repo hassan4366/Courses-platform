@@ -2,10 +2,12 @@ import React from "react";
 import { useContext } from "react";
 import { apiValue } from "../Data/AllData";
 import "../Home/courses.css";
+import { useParams } from "react-router-dom";
 
 function Courses() {
   const { data, error } = useContext(apiValue) || {};
   const courses = data?.courses || [];
+  const {id} = useParams()
 
   if (error) {
     return <h3 className="text-center text-danger">Failed to load data.</h3>;

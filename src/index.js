@@ -26,7 +26,7 @@ let router = createBrowserRouter([
     element: <AllCatogory />
   },
   {
-    path: "deatial",
+    path: "deatial/:id",
     element: <Alldeatial/>
   },
 ]);

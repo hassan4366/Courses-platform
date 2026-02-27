@@ -63,7 +63,7 @@ function Navbar({ search, setSearch = () => {} }) {
 
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link mr-3" to="/deatial">
+                <Link className="nav-link mr-3" to="/deatial/:id">
                   Teach on Byway
                 </Link>
               </li>
