@@ -1,0 +1,19 @@
+.Click{
+    margin-top:11px;
+}
+.Click button{
+    border: 1px solid rgba(233, 227, 214, 0.747);
+    background-color: transparent;
+}
+.Click button:hover{
+    background-color: aliceblue;
+}
+
+.border-bottom {
+  border-color: #e9ecef !important;
+}
+
+.d-flex:hover {
+  background-color: #f1f3f5;
+  cursor: pointer;
+}

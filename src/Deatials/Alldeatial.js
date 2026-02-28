@@ -4,12 +4,14 @@ import Comments from '../Home/comments'
 import Courses from './Courses'
 import Navbar2 from '../components/Navbar2'
 import { useState } from 'react'
+import Content from './Content'
 
 function Alldeatial() {
   const [search, setSearch] = useState("");
   return (
       <div>
-          <Navbar2 search={search} setSearch={setSearch} />
+      <Navbar2 search={search} setSearch={setSearch} />
+      <Content />
           <Comments />
           <Courses/>
           <Footer/>
