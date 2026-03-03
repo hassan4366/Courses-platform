@@ -6,6 +6,7 @@ import Navbar2 from "../components/Navbar2";
 import { useState } from "react";
 import Content from "./Content";
 import Header1 from "./Header1";
+import Review from "./Review";
 
 function Alldeatial() {
   const [search, setSearch] = useState("");
@@ -14,6 +15,7 @@ function Alldeatial() {
       <Navbar2 search={search} setSearch={setSearch} />
       <Header1 />
       <Content />
+      <Review/>
       <Comments />
       <Courses />
       <Footer />

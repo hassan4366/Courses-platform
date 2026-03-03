@@ -132,6 +132,7 @@ function Content() {
                 <div className="text-muted small">5 Lessons | 1 hour</div>
               </div>
             </div>
+            <hr />
           </div>
         </div>
       </div>
