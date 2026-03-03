@@ -1,12 +1,11 @@
 import React, { useContext } from 'react'
 import { apiValue } from '../Data/AllData';
-import { useParams } from 'react-router';
+import { useParams } from 'react-router-dom';
 
 function Header1() {
     const { id } = useParams()
     const { data, error } = useContext(apiValue) || {}
     const courses = data?.courses || []
-    const item = data?.mentors || []
 
     if (error) {
         return <h3>Failed to load data.</h3>
@@ -35,7 +34,7 @@ function Header1() {
                             </div>
                             <div className='mt-4'>
                                 <img src="/img/Ellipse 5.png" alt="" />
-                                <h6 className='d-inline ml-3'>Created by <span className='text-primary'>{item.filter(mentor => mentor.id === filteredCourse?.mentorId)[0]?.name}</span></h6>
+                                <h6 className='d-inline ml-3'>Created by <span className='text-primary'>{filteredCourse?.mentor}</span></h6>
                             </div>
                         </div>
                     ))}
