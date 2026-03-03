@@ -13,9 +13,7 @@ function Alldeatial() {
     <div>
       <Navbar2 search={search} setSearch={setSearch} />
       <Header1 />
-      <Navbar2 search={search} setSearch={setSearch} />
       <Content />
-
       <Comments />
       <Courses />
       <Footer />
