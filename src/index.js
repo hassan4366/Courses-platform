@@ -6,6 +6,7 @@ import AllSignup from "./Signup/AllSignup";
 import Register from "./Login/register";
 import AllCatogory from "./Category/AllCatogory";
 import Alldeatial from "./Deatials/Alldeatial";
+import AllCart from "./Cart/AllCart";
 // import ScrollToTop from "react-scroll-to-top";
 
 let router = createBrowserRouter([
@@ -28,6 +29,10 @@ let router = createBrowserRouter([
   {
     path: "deatial/:id",
     element: <Alldeatial/>
+  },
+  {
+    path: "cart",
+    element: <AllCart/>
   },
 ]);
 
