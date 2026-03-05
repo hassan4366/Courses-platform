@@ -58,7 +58,7 @@ function Header1() {
                                     }}>
                                         Add to Cart
                                     </button>
-                                    <Link to={`/checkout/${filteredCourse?.id}`}className="btn btn-light btn-block w-100 mt-3" style={{ backgroundColor: "white", border: "1px solid black", borderRadius: "5px", color: "black" }}>
+                                    <Link to="/Checkout"className="btn btn-light btn-block w-100 mt-3" style={{ backgroundColor: "white", border: "1px solid black", borderRadius: "5px", color: "black" }}>
                                         Buy Now
                                     </Link>
                                     <hr />

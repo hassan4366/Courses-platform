@@ -110,7 +110,8 @@ function Cart() {
                                             <span className="price font-weight-bold text-dark">${(cartTotal - 10 + 20).toFixed(2)}</span>
                                         </div>
                                     </div>
-                                    <button
+                                    <Link
+                                        to="/Checkout"
                                         type="button"
                                         className="btn btn-dark btn-lg btn-block mt-3"
                                         style={{
@@ -119,7 +120,7 @@ function Cart() {
                                         }}
                                     >
                                         Proceed to Checkout
-                                    </button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
