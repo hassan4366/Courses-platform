@@ -9,11 +9,11 @@
     background-color: aliceblue;
 }
 
-.border-bottom {
+.detail {
   border-color: #e9ecef !important;
 }
 
-.d-flex:hover {
+.detail:hover {
   background-color: #f1f3f5;
   cursor: pointer;
 }

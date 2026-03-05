@@ -41,13 +41,13 @@ function Header1() {
                                     <h6 className='d-inline ml-3'>Created by <span className='text-primary'>{filteredCourse?.mentor}</span></h6>
                                 </div>
                             </div>
-                            <div className="card p-3 col-md-4" style={{ width: "22rem", position: "absolute", right: "50px" }}>
+                            <div className="card p-3 col-md-4" style={{ width: "22rem", position: "absolute", right: "90px" }}>
                                 <img src={filteredCourse?.image} className="card-img-top" alt={filteredCourse?.title} />
                                 <div className="card-body">
                                     <h5 className="card-title font-weight-bold text-dark d-inline mr-3">${filteredCourse?.price * 0.5}</h5>
                                     <del>{filteredCourse?.price}</del>
                                     <h5 className="card-title font-weight-bold text-success d-inline ml-3">50% off</h5>
-                                    <button className="btn btn-dark btn-block w-100 mt-3" onClick={() => {
+                                    <button className=" btn-dark btn-block w-100 mt-3 p-2 rounded" onClick={() => {
                                         addItem(filteredCourse);
                                         Swal.fire({
                                             title: "Added to Cart!",

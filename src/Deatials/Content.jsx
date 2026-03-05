@@ -92,7 +92,7 @@ function Content() {
               Syllabus
             </h4>
             <div className="border rounded">
-              <div className="d-flex justify-content-between align-items-center p-4 border-bottom">
+              <div className="d-flex justify-content-between align-items-center p-4 border-bottom detail">
                 <div>
                   <span className="me-2">
                     <i class="fa-solid fa-chevron-down"></i>
@@ -102,7 +102,7 @@ function Content() {
                 <div className="text-muted small">5 Lessons | 1 hour</div>
               </div>
 
-              <div className="d-flex justify-content-between align-items-center p-4 border-bottom">
+              <div className="d-flex justify-content-between align-items-center p-4 border-bottom detail">
                 <div>
                   <span className="me-2">
                     <i class="fa-solid fa-chevron-down"></i>
@@ -112,7 +112,7 @@ function Content() {
                 <div className="text-muted small">5 Lessons | 1 hour</div>
               </div>
 
-              <div className="d-flex justify-content-between align-items-center p-4 border-bottom">
+              <div className="d-flex justify-content-between align-items-center p-4 border-bottom detail">
                 <div>
                   <span className="me-2">
                     <i class="fa-solid fa-chevron-down"></i>
@@ -122,7 +122,7 @@ function Content() {
                 <div className="text-muted small">5 Lessons | 1 hour</div>
               </div>
 
-              <div className="d-flex justify-content-between align-items-center p-4">
+              <div className="d-flex justify-content-between align-items-center p-4 detail">
                 <div>
                   <span className="me-2">
                     <i class="fa-solid fa-chevron-down"></i>
@@ -132,6 +132,7 @@ function Content() {
                 <div className="text-muted small">5 Lessons | 1 hour</div>
               </div>
             </div>
+            <hr />
           </div>
         </div>
       </div>
