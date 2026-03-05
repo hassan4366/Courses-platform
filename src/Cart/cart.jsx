@@ -8,15 +8,11 @@ function Cart() {
     const {
         items,
         removeItem,
-        updateItemQuantity,
         isEmpty,
         cartTotal,
         totalItems,
-        totalUniqueItems,
     } = useCart();
-    const { id } = useParams();
     const { data, error } = useContext(apiValue) || {}
-    const courses = data?.courses || []
 
     if (isEmpty)
         return (
