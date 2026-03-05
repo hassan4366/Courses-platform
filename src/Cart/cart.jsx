@@ -1,17 +1,10 @@
 import React, { useContext } from 'react'
-import { useParams } from 'react-router'
 import { apiValue } from '../Data/AllData';
 import { useCart } from 'react-use-cart';
 import { Link } from 'react-router-dom';
 
 function Cart() {
-    const {
-        items,
-        removeItem,
-        isEmpty,
-        cartTotal,
-        totalItems,
-    } = useCart();
+    const { items, removeItem, isEmpty, cartTotal, totalItems} = useCart();
     const { data, error } = useContext(apiValue) || {}
 
     if (isEmpty)
