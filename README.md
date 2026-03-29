@@ -5,7 +5,7 @@
 # 📚 ByWay — E-Learning Platform
 
 **A modern e-learning platform built with React to deliver online courses through an interactive and user-friendly experience.**  
-It enables students to browse courses, watch lessons, and track their progress seamlessly in a clean and simple interface.
+It enables students to browse courses, watch lessons, and track their progress seamlessly through a clean, simple interface.
 
 <br/>
 
@@ -63,10 +63,10 @@ Make sure you have the following installed:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/byway.git
+https://github.com/hassan4366/Courses-platform.git
 
 # 2. Navigate into the project folder
-cd byway
+cd Courses-platform
 
 # 3. Install dependencies
 npm install
@@ -75,7 +75,7 @@ npm install
 npm start
 ```
 
-The app will run at `http://localhost:3000` 🎉
+The app will run at `http://localhost:3000` 
 
 ---
 
@@ -103,7 +103,7 @@ byway/
 
 | Home Page | Course Page |
 |-----------|-------------|
-| ![Home](#) | ![Course](#) |
+| ![Home](#) | ![Course]() |
 
 ---
 
@@ -144,9 +144,11 @@ This project is open source and available for contribution.
 ---
 
 ## Made by :
-<a href="https://github.com/hassan4366">Hassan Hammam</a> 
+<a href="https://github.com/hassan4366">Hassan Hammam</a>
+
+<a href="#">Hassan Tantawy</a>
+
 <hr/>
-<a href="###">Hassan Tantawy</a>
 
 **If you found this project helpful, consider giving it a star!** ⭐
 
