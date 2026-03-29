@@ -114,7 +114,8 @@ byway/
 
 | Home Page | Course Page |
 |-----------|-------------|
-| ![Home](assets/image/coutt.png) | ![Course](assets/image/details.png) |
+| ![Home](assets/image/coutt.PNG) | ![Course](assets/image/details.PNG) |
+
 
 ---
 
