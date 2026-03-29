@@ -143,13 +143,10 @@ This project is open source and available for contribution.
 
 ---
 
-<div align="center">
-
-Made by:
+## Made by :
 <a href="https://github.com/hassan4366">Hassan Hammam</a>
 <a href="###">Hassan Tantawy</a>
 
-
-⭐ **If you found this project helpful, consider giving it a star!** ⭐
+**If you found this project helpful, consider giving it a star!** ⭐
 
 </div>
