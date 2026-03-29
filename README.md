@@ -112,7 +112,7 @@ byway/
 
 ## 📸 Screenshots
 
-| Home Page | Course Page |
+| Courses Page | Deatils-Course Page |
 |-----------|-------------|
 | ![Home](assets/image/coutt.PNG) | ![Course](assets/image/details.PNG) |
 
