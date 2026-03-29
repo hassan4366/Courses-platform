@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Navbar from "../components/Navbar";
 import DesignCourses from "./DesignCourses";
+import Navbar2 from "../components/Navbar2";
 import Popular from "./Popular";
 import Featured from "./Featured";
 import Footer from "../components/footer";
@@ -11,7 +11,7 @@ function AllCatogory() {
 
   return (
     <div>
-      <Navbar search={search} setSearch={setSearch} />
+      <Navbar2 search={search} setSearch={setSearch} />
       <DesignCourses search={search} />
       <Popular />
       <Featured />
