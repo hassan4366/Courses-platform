@@ -112,11 +112,9 @@ byway/
 
 ## 📸 Screenshots
 
-> *Add screenshots of your project here to showcase the UI.*
-
 | Home Page | Course Page |
 |-----------|-------------|
-| ![Home](<img src="assets/image/coutt.png" width="700"/>) | ![Course](<img src="assets/image/details.png" width="700"/>) |
+| ![Home](assets/image/coutt.png) | ![Course](assets/image/details.png) |
 
 ---
 
