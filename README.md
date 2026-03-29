@@ -144,7 +144,8 @@ This project is open source and available for contribution.
 ---
 
 ## Made by :
-<a href="https://github.com/hassan4366">Hassan Hammam</a>
+<a href="https://github.com/hassan4366">Hassan Hammam</a> 
+<hr/>
 <a href="###">Hassan Tantawy</a>
 
 **If you found this project helpful, consider giving it a star!** ⭐
