@@ -84,13 +84,26 @@ The app will run at `http://localhost:3000`
 ```
 byway/
 ├── public/
+│   └──CSS/
+│   └── JS/
+│   └── Img/
+│   └── Webfonts/              # Images, icons, fonts
 │   └── index.html
-├── src/
-│   ├── assets/         # Images, icons, fonts
-│   ├── components/     # Reusable UI components
-│   ├── pages/          # Page-level components
-│   ├── App.js
-│   └── index.js
+
+├── assets/
+│   └──Image/
+
+├── Src/
+│   └──components/      # Reusable UI components
+│   └──Cart/
+│   └──Category/
+│   └──Checkout/
+│   └──Data/
+│   └──Home/            # Page-level components
+│   └──App.js
+│   └──index.js
+
+├── package-Lock.json
 ├── package.json
 └── README.md
 ```
@@ -103,7 +116,7 @@ byway/
 
 | Home Page | Course Page |
 |-----------|-------------|
-| ![Home](#) | ![Course]() |
+| ![Home](<img src="assets/image/coutt.png" width="700"/>) | ![Course](<img src="assets/image/details.png" width="700"/>) |
 
 ---
 
