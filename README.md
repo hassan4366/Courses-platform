@@ -155,8 +155,6 @@ This project is open source and available for contribution.
 
 ---
 
----
-
 ##  Live Demo
 
 <a href="https://bywaycourses.netlify.app/">Click Here</a>
