@@ -165,7 +165,7 @@ This project is open source and available for contribution.
 ## Made by :
 <a href="https://github.com/hassan4366">Hassan Hammam</a>
 
-<a href="#">Hassan Tantawy</a>
+<a href="https://github.com/HassanTantawy-dev">Hassan Tantawy</a>
 
 <hr/>
 
