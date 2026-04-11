@@ -36,7 +36,7 @@ let router = createBrowserRouter([
     element: <AllCart/>
   },
   {
-    path: "checkout",
+    path: "checkout/:id",
     element: <Allcheck/>
   },
 ]);

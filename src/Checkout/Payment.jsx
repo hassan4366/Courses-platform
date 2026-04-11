@@ -1,11 +1,14 @@
 import React, { useContext } from "react";
 import { apiValue } from "../Data/AllData";
 import { useCart } from "react-use-cart";
-import { Link } from "react-router-dom";
+import { Link, useParams, useLocation } from "react-router-dom";
 
-function Cart() {
+function Payment() {
   const { cartTotal } = useCart();
   const context = useContext(apiValue);
+  // id is retrieved from the URL /checkout/:id
+  const { id } = useParams();
+  const location = useLocation();
 
   if (!context) {
     return <h3>Context not found.</h3>;
@@ -20,6 +23,16 @@ function Cart() {
   if (!data) {
     return <h3>Loading...</h3>;
   }
+
+  // 1. Define courses to solve the 'not defined' error
+  const courses = data?.courses || [];
+
+  // 2. Solve the "Price Move" - capture data from location.state
+  const displayPrice = location.state?.price || (cartTotal - 10 + 20).toFixed(2);
+  const displayTitle = location.state?.title || "Order Details";
+
+  // Find the specific course if checking out a single item via "Buy Now"
+  const selectedCourse = courses.find(c => c.id === parseInt(id));
 
   return (
     <main className="page">
@@ -142,48 +155,50 @@ function Cart() {
                   </div>
                 </div>
               </div>
-              <div className="col-md-4 m-auto">
-                <h4 className="text-dark font-weight-bold">Order Details</h4>
 
+              <div className="col-md-4 m-auto">
+                <h4 className="text-dark font-weight-bold">
+                  {selectedCourse ? selectedCourse.title : displayTitle}
+                </h4>
                 <div className="summary">
                   <div className="summary-item">
                     <span className="text">Price</span>
                     <span className="price font-weight-bold text-dark">
-                      ${cartTotal.toFixed(2)}
+                      {/* Use the passed price if available, otherwise cart total */}
+                      ${location.state?.price || cartTotal.toFixed(2)}
                     </span>
                   </div>
 
-                  <div className="summary-item">
-                    <span className="text">Discount</span>
-                    <span className="price font-weight-bold text-dark">
-                      $-10.00
-                    </span>
-                  </div>
-
-                  <div className="summary-item">
-                    <span className="text">Tax</span>
-                    <span className="price font-weight-bold text-dark">
-                      $20.00
-                    </span>
-                  </div>
-
-                  <hr />
+                  {/* Only show static adjustments if coming from the Cart checkout */}
+                  {!location.state?.price && (
+                    <>
+                      <div className="summary-item">
+                        <span className="text">Discount</span>
+                        <span className="price font-weight-bold text-dark">
+                          $-10.00
+                        </span>
+                      </div>
+                      <div className="summary-item">
+                        <span className="text">Tax</span>
+                        <span className="price font-weight-bold text-dark">
+                          $20.00
+                        </span>
+                      </div>
+                    </>
+                  )}
 
                   <div className="summary-item">
                     <span className="text">Total</span>
                     <span className="price font-weight-bold text-dark">
-                      ${(cartTotal - 10 + 20).toFixed(2)}
+                      ${displayPrice}
                     </span>
                   </div>
-                </div>
 
-                <Link
-                  to="/Checkout"
-                  className="btn btn-dark btn-lg btn-block mt-3"
-                  style={{ borderRadius: "10px", fontSize: "12px" }}
-                >
-                  Proceed to Checkout
-                </Link>
+                  <hr />
+                </div>
+                <button className="btn btn-primary w-100 mt-3 py-3 fw-bold">
+                  Complete Payment
+                </button>
               </div>
             </div>
           </div>
@@ -193,4 +208,4 @@ function Cart() {
   );
 }
 
-export default Cart;
+export default Payment;

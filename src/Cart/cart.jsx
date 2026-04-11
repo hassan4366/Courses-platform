@@ -4,7 +4,7 @@ import { useCart } from 'react-use-cart';
 import { Link } from 'react-router-dom';
 
 function Cart() {
-    const { items, removeItem, isEmpty, cartTotal, totalItems} = useCart();
+    const { items, removeItem, isEmpty, cartTotal, totalItems } = useCart();
     const { data, error } = useContext(apiValue) || {}
 
     if (isEmpty)
@@ -111,7 +111,8 @@ function Cart() {
                                         </div>
                                     </div>
                                     <Link
-                                        to="/Checkout"
+                                        to="/checkout/cart"
+                                        state={{ price: (cartTotal - 10 + 20).toFixed(2), title: "Cart Items" }}
                                         type="button"
                                         className="btn btn-dark btn-lg btn-block mt-3"
                                         style={{
