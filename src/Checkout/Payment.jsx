@@ -10,6 +10,16 @@ function Payment() {
   const { id } = useParams();
   const navigate = useNavigate();
   const location = useLocation();
+
+  // Define missing variables at the top level to comply with Rules of Hooks
+  const { isDirectPurchase, basePrice, totalPrice } = useMemo(() => {
+    const directPrice = location.state?.price;
+    const isDirect = !!directPrice;
+    const base = isDirect ? (parseFloat(directPrice) || 0) : cartTotal;
+    const total = (isDirect ? base : base - 10 + 20).toFixed(2);
+    return { isDirectPurchase: isDirect, basePrice: base, totalPrice: total };
+  }, [location.state?.price, cartTotal]);
+
   if (!context) {
     return <h3>Context not found.</h3>;
   }
@@ -26,15 +36,6 @@ function Payment() {
 
   // 1. Define courses to solve the 'not defined' error
   const courses = data?.courses || [];
-
-  // 2. Calculate display prices and titles using useMemo for stability
-  const { isDirectPurchase, basePrice, totalPrice } = useMemo(() => {
-    const directPrice = location.state?.price;
-    const isDirect = !!directPrice;
-    const base = isDirect ? parseFloat(directPrice) : cartTotal;
-    const total = (isDirect ? base : base + 10).toFixed(2);
-    return { isDirectPurchase: isDirect, basePrice: base, totalPrice: total };
-  }, [location.state?.price, cartTotal]);
 
   const displayTitle = location.state?.title || "Order Details";
 
