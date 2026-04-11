@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { apiValue } from "../Data/AllData";
 import { useCart } from "react-use-cart";
 import { useParams, useLocation } from "react-router-dom";
@@ -6,7 +6,6 @@ import { useParams, useLocation } from "react-router-dom";
 function Payment() {
   const { cartTotal } = useCart();
   const context = useContext(apiValue);
-  // id is retrieved from the URL /checkout/:id
   const { id } = useParams();
   const location = useLocation();
   if (!context) {
@@ -26,12 +25,14 @@ function Payment() {
   // 1. Define courses to solve the 'not defined' error
   const courses = data?.courses || [];
 
-  // 2. Solve the "Price Move" - capture data from location.state
-  const displayPrice = (location.state?.price ? parseFloat(location.state.price) : (cartTotal + 10)).toFixed(2);
+  // 2. Calculate display prices and titles consistently
+  const isDirectPurchase = !!location.state?.price;
+  const basePrice = isDirectPurchase ? parseFloat(location.state.price) : cartTotal;
+  const totalPrice = (isDirectPurchase ? basePrice : basePrice + 10).toFixed(2);
   const displayTitle = location.state?.title || "Order Details";
 
   // Find the specific course if checking out a single item via "Buy Now"
-  const selectedCourse = courses.find(c => c.id === parseInt(id));
+  const selectedCourse = courses.find(c => c.id === parseInt(id, 10));
 
   return (
     <main className="page">
@@ -164,12 +165,12 @@ function Payment() {
                     <span className="text">Price</span>
                     <span className="price font-weight-bold text-dark">
                       {/* Use the passed price if available, otherwise cart total */}
-                      ${(location.state?.price ? parseFloat(location.state.price) : cartTotal).toFixed(2)}
+                      ${basePrice.toFixed(2)}
                     </span>
                   </div>
 
-                  {/* Only show static adjustments if coming from the Cart checkout */}
-                  {!location.state?.price && (
+                  {/* Only show static adjustments if checking out the full cart */}
+                  {!isDirectPurchase && (
                     <>
                       <div className="summary-item">
                         <span className="text">Discount</span>
@@ -189,7 +190,7 @@ function Payment() {
                   <div className="summary-item">
                     <span className="text">Total</span>
                     <span className="price font-weight-bold text-dark">
-                      ${displayPrice}
+                      ${totalPrice}
                     </span>
                   </div>
 
