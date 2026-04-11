@@ -9,7 +9,6 @@ function Payment() {
   // id is retrieved from the URL /checkout/:id
   const { id } = useParams();
   const location = useLocation();
-
   if (!context) {
     return <h3>Context not found.</h3>;
   }
