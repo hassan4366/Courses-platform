@@ -51,20 +51,22 @@ function Payment() {
               <div className="col-md-8 mt-4 border border-light rounded-4 border-3">
                 <div className="checkout-form p-4 border-3 rounded">
                   <div className="row mb-4">
-                    <div className="col-md-6">
-                      <label className="form-label fw-bold">Country</label>
+                    <div className="col-md-6 mb-3">
+                      <label htmlFor="country" className="form-label fw-bold">Country</label>
                       <input
+                        id="country"
                         type="text"
                         className="form-control"
                         placeholder="Enter Country"
                       />
                     </div>
 
-                    <div className="col-md-6">
-                      <label className="form-label fw-bold">
+                    <div className="col-md-6 mb-3">
+                      <label htmlFor="state" className="form-label fw-bold">
                         State/Union Territory
                       </label>
                       <input
+                        id="state"
                         type="text"
                         className="form-control"
                         placeholder="Enter State"
@@ -78,14 +80,17 @@ function Payment() {
                   {/* Credit Card */}
                   <div className="card p-3 mb-3 border-0  bg-light">
                     <div className="d-flex justify-content-between  align-items-center mb-3">
-                      <div>
+                      <div className="form-check">
                         <input
+                          id="creditCard"
                           type="radio"
                           name="payment"
                           defaultChecked
-                          className="form-check-input ml-1"
+                          className="form-check-input"
                         />
-                        <span className="fw-bold">Credit/Debit Card</span>
+                        <label htmlFor="creditCard" className="form-check-label fw-bold">
+                          Credit/Debit Card
+                        </label>
                       </div>
 
                       <img
@@ -96,8 +101,9 @@ function Payment() {
                     </div>
 
                     <div className="mb-3">
-                      <label className="form-label">Name of Card</label>
+                      <label htmlFor="cardName" className="form-label">Name of Card</label>
                       <input
+                        id="cardName"
                         type="text"
                         className="form-control"
                         placeholder="Name of card"
@@ -105,8 +111,9 @@ function Payment() {
                     </div>
 
                     <div className="mb-3">
-                      <label className="form-label">Card Number</label>
+                      <label htmlFor="cardNumber" className="form-label">Card Number</label>
                       <input
+                        id="cardNumber"
                         type="text"
                         className="form-control"
                         placeholder="Card Number"
@@ -115,8 +122,9 @@ function Payment() {
 
                     <div className="row">
                       <div className="col-md-6">
-                        <label className="form-label">Expiry Date</label>
+                        <label htmlFor="expiryDate" className="form-label">Expiry Date</label>
                         <input
+                          id="expiryDate"
                           type="text"
                           className="form-control"
                           placeholder="MM/YY"
@@ -124,8 +132,9 @@ function Payment() {
                       </div>
 
                       <div className="col-md-6">
-                        <label className="form-label">CVC/CVV</label>
+                        <label htmlFor="cvc" className="form-label">CVC/CVV</label>
                         <input
+                          id="cvc"
                           type="text"
                           className="form-control"
                           placeholder="CVC"
@@ -137,13 +146,16 @@ function Payment() {
                   {/* PayPal */}
                   <div className="card p-3 border-0  bg-light mt-2 shadow-sm">
                     <div className="d-flex justify-content-between align-items-center">
-                      <div>
+                      <div className="form-check">
                         <input
+                          id="paypal"
                           type="radio"
                           name="payment"
-                          className="form-check-input ml-1"
+                          className="form-check-input"
                         />
-                        <span className="fw-bold">PayPal</span>
+                        <label htmlFor="paypal" className="form-check-label fw-bold">
+                          PayPal
+                        </label>
                       </div>
 
                       <img
