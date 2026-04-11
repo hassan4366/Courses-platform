@@ -27,7 +27,7 @@ function Payment() {
   const courses = data?.courses || [];
 
   // 2. Solve the "Price Move" - capture data from location.state
-  const displayPrice = location.state?.price || (cartTotal - 10 + 20).toFixed(2);
+  const displayPrice = (location.state?.price ? parseFloat(location.state.price) : (cartTotal + 10)).toFixed(2);
   const displayTitle = location.state?.title || "Order Details";
 
   // Find the specific course if checking out a single item via "Buy Now"
