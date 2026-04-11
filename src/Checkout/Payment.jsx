@@ -164,7 +164,7 @@ function Payment() {
                     <span className="text">Price</span>
                     <span className="price font-weight-bold text-dark">
                       {/* Use the passed price if available, otherwise cart total */}
-                      ${location.state?.price || cartTotal.toFixed(2)}
+                      ${(location.state?.price ? parseFloat(location.state.price) : cartTotal).toFixed(2)}
                     </span>
                   </div>
 
