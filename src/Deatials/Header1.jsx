@@ -24,7 +24,7 @@ function Header1() {
                     {courses.filter(course => course.id === parseInt(id)).map(filteredCourse => (
                         <React.Fragment key={filteredCourse.id}>
                             <div className='col-lg-8 mt-5'>
-                                <h5 className='text-muted mb-4 mb-md-5'>Home > Category > <span className='text-primary'>{filteredCourse?.title}</span></h5>
+                                <h5 className='text-muted mb-4 mb-md-5'>Home &gt; Category &gt; <span className='text-primary'>{filteredCourse?.title}</span></h5>
                                 <h1 className='fw-bold mt-3 text-dark' style={{ fontSize: 'calc(1.3rem + 1.2vw)' }}>{filteredCourse?.title}</h1>
                                 <p className='mt-4'>This course is meticulously crafted to provide you with a foundational understanding of the principles, methodologies, and tools that drive exceptional user experiences in the digital landscape.</p>
                                 <div className='mb-1'>
