@@ -1,12 +1,14 @@
-import { useContext } from "react";
+import { useContext, useMemo } from "react";
 import { apiValue } from "../Data/AllData";
 import { useCart } from "react-use-cart";
-import { useParams, useLocation } from "react-router-dom";
+import { useParams, useLocation, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function Payment() {
   const { cartTotal } = useCart();
   const context = useContext(apiValue);
   const { id } = useParams();
+  const navigate = useNavigate();
   const location = useLocation();
   if (!context) {
     return <h3>Context not found.</h3>;
@@ -25,14 +27,28 @@ function Payment() {
   // 1. Define courses to solve the 'not defined' error
   const courses = data?.courses || [];
 
-  // 2. Calculate display prices and titles consistently
-  const isDirectPurchase = !!location.state?.price;
-  const basePrice = isDirectPurchase ? parseFloat(location.state.price) : cartTotal;
-  const totalPrice = (isDirectPurchase ? basePrice : basePrice + 10).toFixed(2);
+  // 2. Calculate display prices and titles using useMemo for stability
+  const { isDirectPurchase, basePrice, totalPrice } = useMemo(() => {
+    const directPrice = location.state?.price;
+    const isDirect = !!directPrice;
+    const base = isDirect ? parseFloat(directPrice) : cartTotal;
+    const total = (isDirect ? base : base + 10).toFixed(2);
+    return { isDirectPurchase: isDirect, basePrice: base, totalPrice: total };
+  }, [location.state?.price, cartTotal]);
+
   const displayTitle = location.state?.title || "Order Details";
 
   // Find the specific course if checking out a single item via "Buy Now"
   const selectedCourse = courses.find(c => c.id === parseInt(id, 10));
+
+  const handlePayment = () => {
+    Swal.fire({
+      title: "Payment Successful!",
+      text: `Your order for ${selectedCourse?.title || "the items in your cart"} has been processed.`,
+      icon: "success",
+      confirmButtonText: "Go to My Courses",
+    }).then(() => navigate("/"));
+  };
 
   return (
     <main className="page">
@@ -208,7 +224,10 @@ function Payment() {
 
                   <hr />
                 </div>
-                <button className="btn btn-primary w-100 mt-3 py-3 fw-bold">
+                <button
+                  className="btn btn-primary w-100 mt-3 py-3 fw-bold"
+                  onClick={handlePayment}
+                >
                   Complete Payment
                 </button>
               </div>
