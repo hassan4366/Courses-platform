@@ -7,7 +7,7 @@ function Payment() {
   const { cartTotal } = useCart();
   const context = useContext(apiValue);
   // id is retrieved from the URL /checkout/:id
-  const { id } = useParams();
+  const { id } = useParams(); 
   const location = useLocation();
 
   if (!context) {
@@ -25,8 +25,8 @@ function Payment() {
   }
 
   // 1. Define courses to solve the 'not defined' error
-  const courses = data?.courses || [];
-
+  const courses = data?.courses || []; 
+  
   // 2. Solve the "Price Move" - capture data from location.state
   const displayPrice = location.state?.price || (cartTotal - 10 + 20).toFixed(2);
   const displayTitle = location.state?.title || "Order Details";
